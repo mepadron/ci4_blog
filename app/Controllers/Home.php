@@ -6,15 +6,23 @@ class Home extends BaseController
 {
     public function index()
     {
+        $datos[]= Array();
+        $datos['nombre'] = "Miguel Padrón";
+        $datos['sueldo'] = "45,000 $";
+
         $vistas= view('template/header.php')
-                .view('welcome_message')
+                .view('welcome_message', $datos)
                 .view('template/footer.php');//pie
-                
+
         return $vistas;
     }
 
-    public function nombre()
+    public function login()
     {
-        echo "Hola desde el controlador";
+        $vistas= view('template/header.php')
+                .view('Login_usuario')
+                .view('template/footer.php');//pie
+
+        return $vistas;
     }
 }

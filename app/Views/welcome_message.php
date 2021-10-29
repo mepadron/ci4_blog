@@ -14,5 +14,6 @@
 	<p>The corresponding controller for this page can be found at:</p>
 
 	<pre><code>app/Controllers/Home.php</code></pre>
+	<p><?php echo "Hola como esta le saluda ". $nombre. " tu sueldo es de ",$sueldo?></p>
 
 </section>
