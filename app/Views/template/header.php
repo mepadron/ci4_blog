@@ -214,7 +214,7 @@
 					href="https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md" target="_blank">Contribute</a>
 			</li>
 			<li class="menu-item hidden"><a
-					href="<?php echo base_url();?>/Home/login" target="_blank">Login</a>
+					href="<?php echo base_url();?>/Home/login" >Login</a>
 			</li>
 		</ul>
 	</div>
