@@ -34,9 +34,21 @@ class Home extends BaseController
 
     public function obtenerDatos(){
 
-        // print_r($_POST['email']);
-        // print_r($request->getPost('email'));
-        // echo "Hola ";
-        var_dump($this->request->getPost('email'));
+        
+        $emailF=$this->request->getPost('email');
+
+        $claveF=$this->request->getPost('clave');
+
+        if($emailF=="mp" and $claveF=='1234'){
+
+            echo "usted esta logueado dentro del sistema";
+
+        }else{
+
+            echo "usted NO PERETENCE AL sistema";
+            
+        }
+        // var_dump()
+
     }
 }

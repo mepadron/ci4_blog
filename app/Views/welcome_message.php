@@ -15,5 +15,7 @@
 
 	<pre><code>app/Controllers/Home.php</code></pre>
 	<p><?php echo "Hola como esta le saluda ". $nombre. " tu sueldo es de ",$sueldo?></p>
+	<p><?= site_url();?></p>
+	<p><?= base_url();?>/</p>
 
 </section>
