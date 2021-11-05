@@ -33,10 +33,27 @@ class Home extends BaseController
     }
 
     public function obtenerDatos(){
+        
+        $userModel = new \App\Models\LoginModel();
+        // var_dump($userModel->loginBD);
+        
+        $emailF=$this->request->getPost('email');
 
-        // print_r($_POST['email']);
-        // print_r($request->getPost('email'));
-        // echo "Hola ";
-        var_dump($this->request->getPost('email'));
+        $claveF=$this->request->getPost('clave');
+
+        if($userModel->validarLogin($emailF,$claveF)){
+
+            // echo "usted esta logueado dentro del sistema";
+            $vistas= view('template/backend/header_back')
+                    .view('dashboard')
+                    .view('template/backend/footer_back');//pie
+            return $vistas;
+
+        }else{
+
+            echo "usted NO PERETENCE AL sistema";
+            
+        }
+
     }
 }
