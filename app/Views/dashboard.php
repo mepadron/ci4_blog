@@ -111,6 +111,7 @@
                         <div class="text-xs font-bold uppercase text-teal-700 mt-1 mb-2">Blog post</div>
                         <div class="text-xl font-bold mb-2">Big case study</div>
                         <div class="truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ut vel facilis iste, dicta est minus alias, aliquam, velit nisi quo assumenda porro dignissimos doloremque temporibus eum saepe aspernatur ab.</div>
+                        <p><?= $cedulaPersona. " ".$nombrePersona." ".$apellidoPersona ?></p>
                     </div>
                 </div>
             </div>
