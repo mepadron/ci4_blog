@@ -1,4 +1,4 @@
-
+<?= \Config\Services::validation()->listErrors(); ?>
 <div class="w-full h-screen flex justify-center items-center">
 
   <div class="max-w-lg mx-auto">
@@ -21,7 +21,7 @@
           </div>
           <div class="mb-6">
               <label for="password" class="text-sm font-medium text-gray-900 block mb-2">Your password</label>
-              <input name="clave" type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required="">
+              <input name="clave" type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
           </div>
           <!-- <div class="flex items-start mb-6">
               <div class="flex items-center h-5">
