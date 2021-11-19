@@ -117,10 +117,21 @@
             </div>
             <div class="transition-all ease-in-out duration-1000 flex flex-col justify-center mx-0 md:mx-4">
                 <div slot="bottom-center" class="max-w-xs">
-                    <div class="p-5 shadow-md m-2 mt-4"><img class="object-scale-down h-30" src="https://s.spielwarenmesse.de/fileadmin/data_archive/Relaunch_Spielwarenmesse/magazine/header/20190618_Header_Memes.jpg" alt="step3">
-                        <div class="text-xs font-bold uppercase text-teal-700 mt-1 mb-2">Blog post</div>
-                        <div class="text-xl font-bold mb-2">Big case study</div>
-                        <div class="truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ut vel facilis iste, dicta est minus alias, aliquam, velit nisi quo assumenda porro dignissimos doloremque temporibus eum saepe aspernatur ab.</div>
+                    <div class="p-5 shadow-md m-2 mt-4">
+                        <div class="text-xs font-bold uppercase text-teal-700 mt-1 mb-2">Formulario registro empleado</div>
+                        <div class="text-xl font-bold mb-2">
+
+                          <?= form_fieldset('Llenar con datos'); ?>
+                          <?= form_open('Home/datosFormulario',['class' => 'fo', 'id' => 'myform'],['username' => 'Joe', 'member_id' => '234']); ?>
+                          <?= form_input(['name'=>'lolo', 'type'=>'text']); ?><br>
+                          <?= form_submit('mysubmit', 'Enviar!',['class'=>'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center m-2']); ?>
+                          
+                          <?= form_close(); ?>
+                          <?= form_fieldset_close(); ?>
+
+
+                        </div>
+                        
                     </div>
                 </div>
             </div>

@@ -91,4 +91,9 @@ class Home extends BaseController
         }
 
     }
+
+    public function datosFormulario()
+    {
+        echo "datos del formulario";
+    }
 }
