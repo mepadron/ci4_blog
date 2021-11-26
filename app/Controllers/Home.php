@@ -11,8 +11,11 @@ class Home extends BaseController
     public $userModel;
     public $personasModel;
 
+    // private $session;
+
     public function __construct()
     {
+        // $this->session = \Config\Services::session();
         // $request = service('request');
         $this->userModel = new \App\Models\LoginModel();
         $this->personasModel = new \App\Models\PersonasModel();
@@ -75,6 +78,14 @@ class Home extends BaseController
                     'nombrePersona' => $this->personasModel->nombreUser,
                     'apellidoPersona' => $this->personasModel->apellidoUser,
                 ];
+                $datosSesion=[
+                    'login'=> $emailF,
+                    'nombreCliente'=> $this->personasModel->nombreUser,
+                    'apellidoCliente'=> $this->personasModel->apellidoUser,
+
+                ];
+
+                $this->session->set($datosSesion);
 
                 // echo "usted esta logueado dentro del sistema";
                 $vistas = view('template/backend/header_back')
@@ -96,4 +107,39 @@ class Home extends BaseController
     {
         echo "datos del formulario";
     }
+
+
+    public function sesiones()
+    {
+        
+        // echo "estoy en el metodo session";
+        $valorLogeo = [
+            'login'=>'mep',
+            'role'=> 'Admin'
+        ];
+        $this->session->set($valorLogeo);
+        
+    }
+    
+    public function obtenerSesion()
+    {
+        // $session = \Config\Services::session();
+        echo $this->session->get('login');
+        echo "  ".$this->session->get('role');
+        echo "  ".session_id();
+    }
+    
+    public function borrarSesion()
+    {
+        // $session = \Config\Services::session();
+        $this->session->remove('login');
+    }
+    
+    public function eliminarTodaSesion()
+    {
+        $session = \Config\Services::session();
+        session_destroy();
+    }
+
+
 }
