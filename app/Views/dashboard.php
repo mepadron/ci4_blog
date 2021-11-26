@@ -1,3 +1,4 @@
+
 <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"> -->
 <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
 
@@ -128,6 +129,12 @@
                           
                           <?= form_close(); ?>
                           <?= form_fieldset_close(); ?>
+                          <?php 
+                          $session = \Config\Services::session();
+                          // echo $_SESSION['nombreCliente'];
+                          echo $session->get('apellidoCliente');
+                          ?>
+                          <?php echo $_SESSION['apellidoCliente'];?>
 
 
                         </div>
